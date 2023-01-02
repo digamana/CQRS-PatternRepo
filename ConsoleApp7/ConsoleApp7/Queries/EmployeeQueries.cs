@@ -1,21 +1,19 @@
 ﻿using ConsoleApp7.DTOs;
-using ConsoleApp7.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ConsoleApp7.DTOs.Model;
+using ConsoleApp7.Queries.Repositories.@interface;
+using Dapper;
+using System.Data.SqlClient;
 
-namespace ConsoleApp7.Repositories.Queries
+namespace ConsoleApp7.Queries
 {
-    public class EmployeeQueries
+    public class EmployeeQueries : IEmployeeQueries
     {
         private readonly IEmployeeQueriesRepository _repository;
         public EmployeeQueries(IEmployeeQueriesRepository repository)
         {
             _repository = repository;
         }
-        public EmployeeDTO FindByID(int EmpID)
+        public EmployeeDTO GetByID(int EmpID)
         {
             var no = _repository.FindByID(EmpID);
             return new EmployeeDTO()
@@ -26,5 +24,6 @@ namespace ConsoleApp7.Repositories.Queries
             };
 
         }
+ 
     }
 }
