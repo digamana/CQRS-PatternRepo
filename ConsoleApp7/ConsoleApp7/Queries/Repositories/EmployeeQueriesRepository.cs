@@ -16,16 +16,18 @@ namespace ConsoleApp7.Queries.Repositories
         }
         public async Task<IEnumerable<dynamic>> GetEmployeeAsync1()
         {
-            using (var connection = new SqlConnection(@""))
+            using (var connection = new SqlConnection(@"SqlConnection"))
             {
                 string strQUERY = @"
-                SELECT o.[Id] as ordernumber,
-                o.[OrderDate] as [date],os.[Name] as [status],
-                SUM(oi.units*oi.unitprice) as total
-                FROM [ordering].[Orders] o
-                LEFT JOIN[ordering].[orderitems] oi ON o.Id = oi.orderid
-                LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
-                GROUP BY o.[Id], o.[OrderDate], os.[Name]
+                Select 
+                Id           as N'Id',
+                FirstName    as N'FirstName',
+                LastName     as N'LastName',
+                DateOfBirth  as N'DateOfBirth',
+                Street       as N'Street',
+                City         as N'City',
+                ZipCode      as N'ZipCode'
+                from dbo.EmployeeSheet
                 ";
                 connection.Open();
                 return await connection.QueryAsync<dynamic>(strQUERY);
