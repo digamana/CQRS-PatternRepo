@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp7.Repositories
+namespace ConsoleApp7.Queries.Repositories.@interface
 {
     public interface IEmployeeQueriesRepository
     {

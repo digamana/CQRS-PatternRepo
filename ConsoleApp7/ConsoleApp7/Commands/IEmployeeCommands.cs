@@ -1,6 +1,6 @@
 ﻿using ConsoleApp7.DTOs.Model;
 
-namespace ConsoleApp7.Repositories.Commands
+namespace ConsoleApp7.Commands
 {
     public interface IEmployeeCommands
     {

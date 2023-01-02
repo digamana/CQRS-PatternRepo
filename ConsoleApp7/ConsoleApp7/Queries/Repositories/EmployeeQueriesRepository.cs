@@ -1,11 +1,7 @@
 ﻿using ConsoleApp7.DTOs.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ConsoleApp7.Queries.Repositories.@interface;
 
-namespace ConsoleApp7.Repositories
+namespace ConsoleApp7.Queries.Repositories
 {
     public class EmployeeQueriesRepository : IEmployeeQueriesRepository
     {
