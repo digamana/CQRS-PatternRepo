@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp7.Repositories
+namespace ConsoleApp7.Commands.Repositories.@interface
 {
-    public interface IEmployeeQueriesRepository
+    public interface IEmployeeCommandsRespository
     {
-        public Employee FindByID(int employeeID);
+        void SaveEmployee(Employee employee);
     }
 }

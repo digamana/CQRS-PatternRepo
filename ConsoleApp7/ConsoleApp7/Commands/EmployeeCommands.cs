@@ -1,5 +1,4 @@
 ﻿using ConsoleApp7.DTOs.Model;
-using ConsoleApp7;
 using ConsoleApp7.Repositories;
 using System;
 using System.Collections.Generic;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp7.Repositories.Commands
+namespace ConsoleApp7.Commands
 {
     public class EmployeeCommands : IEmployeeCommands
     {
